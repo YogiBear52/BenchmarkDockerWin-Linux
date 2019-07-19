@@ -1,0 +1,12 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch
+WORKDIR /src
+COPY ["DockerBenchmark/DockerBenchmark.csproj", "DockerBenchmark/"]
+
+RUN dotnet restore "DockerBenchmark/DockerBenchmark.csproj"
+COPY . .
+
+WORKDIR "/src/DockerBenchmark"
+RUN dotnet build "DockerBenchmark.csproj" -c Release
+
+WORKDIR "bin/Release/netcoreapp2.2"
+ENTRYPOINT ["dotnet", "DockerBenchmark.dll"]

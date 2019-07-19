@@ -1,0 +1,21 @@
+﻿Publish dockers and Instaniate on Azure
+Memory (Use Benchmarkdotnet provider) - Show GC of some nice methods. Maybe write a method with Hight memory usage
+Write Multitasking Method
+Draw Graph
+SIMD
+
+
+
+Publish new version:
+Windows:
+- docker build -t docker-benchmark-windows -f DockerBenchmark/Dockerfile .
+- docker tag docker-benchmark-windows yogevmizrahi/docker-benchmark-windows
+- docker push yogevmizrahi/docker-benchmark-windows
+
+Linux:
+- docker build -t docker-benchmark-linux -f DockerBenchmark/DockerfileLinux .
+- docker tag docker-benchmark-linux yogevmizrahi/docker-benchmark-linux
+- docker push yogevmizrahi/docker-benchmark-linux
+
+Azure:
+az container logs --resource-group YogevResourceGroup --name benchmark
