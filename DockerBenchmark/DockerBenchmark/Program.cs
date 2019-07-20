@@ -2,6 +2,8 @@
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Running;
 using BenchmarkDotNet.Toolchains.InProcess.Emit;
+using DockerBenchmark.OS;
+using DockerBenchmark.Threading;
 using System;
 using System.Tests;
 
@@ -17,7 +19,8 @@ namespace DockerBenchmark
 
             if (args == null || args.Length == 0)
             {
-                var summary = BenchmarkRunner.Run<DateTimeBenchmark>(config);
+                var summary = BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).RunAll();
+                //var summary = BenchmarkRunner.Run<MutexBenchmark>(config);
             }
             else
             {

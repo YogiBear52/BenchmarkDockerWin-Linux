@@ -6,7 +6,7 @@ using BenchmarkDotNet.Attributes;
 
 namespace System.Tests
 {
-    public class DateTimeBenchmark
+    public class Perf_DateTimeBenchmark
     {
         [Benchmark]
         public DateTime GetNow() => DateTime.Now;

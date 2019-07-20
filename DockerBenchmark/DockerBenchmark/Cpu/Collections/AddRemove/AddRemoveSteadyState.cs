@@ -41,24 +41,10 @@ namespace System.Collections.Tests
         }
 
         [Benchmark]
-        public void ConcurrentQueue()
-        {
-            _concurrentQueue.TryDequeue(out T item);
-            _concurrentQueue.Enqueue(item);
-        }
-
-        [Benchmark]
         public void ConcurrentStack()
         {
             _concurrentStack.TryPop(out T item);
             _concurrentStack.Push(item);
-        }
-
-        [Benchmark]
-        public void Queue()
-        {
-            T item = _queue.Dequeue();
-            _queue.Enqueue(item);
         }
 
         [Benchmark]
