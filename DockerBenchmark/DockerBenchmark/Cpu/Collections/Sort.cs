@@ -5,9 +5,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Extensions;
+using DockerBenchmark.Common;
 
-namespace System.Collections
+namespace DockerBenchmark.Cpu.Collections
 {
     [GenericTypeArguments(typeof(int))] // value type
     [GenericTypeArguments(typeof(string))] // reference type
@@ -21,13 +21,13 @@ namespace System.Collections
 
         private int _iterationIndex = 0;
         private T[] _values;
-        
+
         private T[][] _arrays;
         private List<T>[] _lists;
 
         [GlobalSetup]
         public void Setup() => _values = ValuesGenerator.ArrayOfUniqueValues<T>(Size);
-        
+
         [IterationCleanup]
         public void CleanupIteration() => _iterationIndex = 0; // after every iteration end we set the index to 0
 
@@ -47,7 +47,7 @@ namespace System.Collections
         public int LinqQuery()
         {
             int count = 0;
-            foreach (var _ in (from value in _values orderby value ascending select value))
+            foreach (var _ in from value in _values orderby value ascending select value)
                 count++;
             return count;
         }

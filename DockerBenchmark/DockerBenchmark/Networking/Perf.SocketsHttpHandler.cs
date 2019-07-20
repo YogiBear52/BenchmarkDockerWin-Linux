@@ -4,7 +4,10 @@
 
 // following benchmarks consume .NET Core 2.1 APIs and are disabled for other frameworks in .csproj file
 
+using System;
 using System.IO;
+using System.Net;
+using System.Net.Http;
 using System.Net.Security;
 using System.Net.Sockets;
 using System.Security.Authentication;
@@ -13,7 +16,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 
-namespace System.Net.Http.Tests
+namespace DockerBenchmark.Networking
 {
     public class SocketsHttpHandlerPerfTest
     {
@@ -32,7 +35,7 @@ namespace System.Net.Http.Tests
         [GlobalSetup]
         public void Setup()
         {
-            _serverCert = Test.Common.Configuration.Certificates.GetServerCertificate();
+            _serverCert = Configuration.Certificates.GetServerCertificate();
             _listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             _listener.Bind(new IPEndPoint(IPAddress.Loopback, 0));

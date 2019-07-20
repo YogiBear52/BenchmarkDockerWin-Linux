@@ -3,8 +3,9 @@
 // See the LICENSE file in the project root for more information.
 
 using BenchmarkDotNet.Attributes;
+using System.Threading.Tasks;
 
-namespace System.Threading.Tasks.Tests
+namespace DockerBenchmark.Threading
 {
     public class AsyncMethods
     {

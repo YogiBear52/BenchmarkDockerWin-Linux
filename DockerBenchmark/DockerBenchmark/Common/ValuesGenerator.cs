@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BenchmarkDotNet.Extensions
+namespace DockerBenchmark.Common
 {
     public static class ValuesGenerator
     {
@@ -26,7 +26,7 @@ namespace BenchmarkDotNet.Extensions
         /// </summary>
         public static T[] ArrayOfUniqueValues<T>(int count)
         {
-            var random = new Random(Seed); 
+            var random = new Random(Seed);
 
             var uniqueValues = new HashSet<T>();
 
@@ -40,10 +40,10 @@ namespace BenchmarkDotNet.Extensions
 
             return uniqueValues.ToArray();
         }
-        
+
         public static T[] Array<T>(int count)
         {
-            var random = new Random(Seed); 
+            var random = new Random(Seed);
 
             var result = new T[count];
 
@@ -90,8 +90,8 @@ namespace BenchmarkDotNet.Extensions
             if (typeof(T) == typeof(bool))
                 return (T)(object)(random.NextDouble() > 0.5);
             if (typeof(T) == typeof(string))
-                return (T) (object) GenerateRandomString(random, 1, 50);
-            
+                return (T)(object)GenerateRandomString(random, 1, 50);
+
             throw new NotImplementedException($"{typeof(T).Name} is not implemented");
         }
 
@@ -105,11 +105,11 @@ namespace BenchmarkDotNet.Extensions
                 var rangeSelector = random.Next(0, 3);
 
                 if (rangeSelector == 0)
-                    builder.Append((char) random.Next('a', 'z'));
+                    builder.Append((char)random.Next('a', 'z'));
                 else if (rangeSelector == 1)
-                    builder.Append((char) random.Next('A', 'Z'));
+                    builder.Append((char)random.Next('A', 'Z'));
                 else
-                    builder.Append((char) random.Next('0', '9'));
+                    builder.Append((char)random.Next('0', '9'));
             }
 
             return builder.ToString();

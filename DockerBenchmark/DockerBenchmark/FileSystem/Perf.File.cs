@@ -2,10 +2,11 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System.IO;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
 
-namespace System.IO.Tests
+namespace DockerBenchmark.FileSystem
 {
     public class Perf_File
     {

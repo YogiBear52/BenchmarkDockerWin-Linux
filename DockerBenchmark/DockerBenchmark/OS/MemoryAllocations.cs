@@ -2,14 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DockerBenchmark.OS
 {
     [MemoryDiagnoser]
     public class MemoryAllocations
     {
-        [Params(100,1000,10000)]
+        [Params(1000, 5000)]
         public int number_of_objects_to_allocate { get; set; }
 
         [Benchmark]

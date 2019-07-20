@@ -5,7 +5,7 @@
 using System.Collections.Generic;
 using BenchmarkDotNet.Attributes;
 
-namespace System.Collections.Tests
+namespace DockerBenchmark.Cpu.Collections.SortedSet
 {
     public class Perf_SortedSet
     {

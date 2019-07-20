@@ -3,22 +3,23 @@
 // See the LICENSE file in the project root for more information.
 
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 
-namespace System.Text.RegularExpressions.Tests
+namespace DockerBenchmark.Cpu.RegularExpressions
 {
     public class RegexRedux
     {
         static readonly string input = File.ReadAllText(
             Path.Combine(
-                Path.GetDirectoryName(typeof(RegexRedux).Assembly.Location), 
-                "corefx", "System.Text.RegularExpressions", "content", 
+                Path.GetDirectoryName(typeof(RegexRedux).Assembly.Location),
+                "corefx", "System.Text.RegularExpressions", "content",
                 "200_000.in"));
 
         static Regex regex(string re, RegexOptions options)
         {
-             return new Regex(re, options);
+            return new Regex(re, options);
         }
 
         static string regexCount(string s, string r, RegexOptions options)

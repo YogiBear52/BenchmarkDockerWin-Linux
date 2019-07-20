@@ -2,12 +2,13 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Extensions;
+using DockerBenchmark.Common;
 
-namespace System.Collections
+namespace DockerBenchmark.Cpu.Collections
 {
     [GenericTypeArguments(typeof(int))] // value type
     [GenericTypeArguments(typeof(string))] // reference type
@@ -26,7 +27,7 @@ namespace System.Collections
         {
             _array = ValuesGenerator.ArrayOfUniqueValues<T>(Size);
             _list = new List<T>(_array);
-            _immutablearray = Immutable.ImmutableArray.CreateRange(_array);
+            _immutablearray = System.Collections.Immutable.ImmutableArray.CreateRange(_array);
             _destination = new T[Size];
         }
 

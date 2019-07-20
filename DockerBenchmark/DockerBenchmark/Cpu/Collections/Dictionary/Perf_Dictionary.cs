@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
 
-namespace System.Collections.Tests
+namespace DockerBenchmark.Cpu.Collections.Dictionary
 {
     public class Perf_Dictionary
     {

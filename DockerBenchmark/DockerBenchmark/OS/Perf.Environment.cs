@@ -2,22 +2,23 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System;
 using System.Collections;
 using BenchmarkDotNet.Attributes;
 
-namespace System.Tests
+namespace DockerBenchmark.OS
 {
     public class Perf_Environment
     {
         private const string Key = "7efd538f-dcab-4806-839a-972bc463a90c";
         private const string ExpandedKey = "%" + Key + "%";
-        
+
         [GlobalSetup]
         public void Setup() => Environment.SetEnvironmentVariable(Key, "value");
 
         [GlobalCleanup]
         public void Cleanup() => Environment.SetEnvironmentVariable(Key, null);
-        
+
         [Benchmark]
         public string GetEnvironmentVariable() => Environment.GetEnvironmentVariable(Key);
 

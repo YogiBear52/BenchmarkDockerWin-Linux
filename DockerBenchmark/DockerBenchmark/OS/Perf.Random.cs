@@ -3,14 +3,15 @@
 // See the LICENSE file in the project root for more information.
 
 using BenchmarkDotNet.Attributes;
+using System;
 
-namespace System.Tests
+namespace DockerBenchmark.OS
 {
     public class Perf_Random
     {
         Random _random = new Random(123456);
         byte[] _bytes = new byte[1000];
-        
+
         [Benchmark]
         public Random ctor() => new Random();
 

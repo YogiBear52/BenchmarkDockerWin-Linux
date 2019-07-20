@@ -2,10 +2,10 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using System.Collections.Generic;
+using System.Globalization;
 using BenchmarkDotNet.Attributes;
 
-namespace System.Globalization.Tests
+namespace DockerBenchmark.OS
 {
     /// <summary>
     /// Performance tests for converting DateTime to different CultureInfos

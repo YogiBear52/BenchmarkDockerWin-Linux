@@ -2,11 +2,14 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 
-namespace System.Text.RegularExpressions.Tests
+namespace DockerBenchmark.Cpu.RegularExpressions
 {
     public class Perf_Regex_Cache
     {
@@ -20,7 +23,7 @@ namespace System.Text.RegularExpressions.Tests
         {
             _cacheSizeOld = Regex.CacheSize;
             Regex.CacheSize = 0; // clean up cache
-            
+
             _patterns = new Dictionary<(int total, int unique), string[]>
             {
                 { (400_000, 7), CreatePatterns(400_000, 7)},
@@ -44,10 +47,10 @@ namespace System.Text.RegularExpressions.Tests
         {
             if (Regex.CacheSize != cacheSize)
                 Regex.CacheSize = cacheSize;
-            
+
             string[] patterns = _patterns[(total, unique)];
 
-            RunTest(0, total, patterns);        
+            RunTest(0, total, patterns);
         }
 
         private void RunTest(int start, int total, string[] regexps)
@@ -67,7 +70,7 @@ namespace System.Text.RegularExpressions.Tests
         {
             if (Regex.CacheSize != cacheSize)
                 Regex.CacheSize = cacheSize;
-            
+
             string[] patterns = _patterns[(total, unique)];
 
             int sliceLength = total / MaxConcurrency;

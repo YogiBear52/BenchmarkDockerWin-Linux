@@ -3,9 +3,10 @@
 // See the LICENSE file in the project root for more information.
 
 using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Extensions;
+using DockerBenchmark.Common;
+using System.Collections;
 
-namespace System.Collections.Tests
+namespace DockerBenchmark.Cpu.Collections
 {
     public class Perf_BitArray
     {
@@ -39,7 +40,7 @@ namespace System.Collections.Tests
         [Benchmark]
         public BitArray BitArrayBoolArrayCtor() => new BitArray(_bools);
 
-        [GlobalSetup(Targets = new [] { nameof(BitArrayByteArrayCtor), nameof(BitArraySetLengthGrow), nameof(BitArraySetLengthShrink) })]
+        [GlobalSetup(Targets = new[] { nameof(BitArrayByteArrayCtor), nameof(BitArraySetLengthGrow), nameof(BitArraySetLengthShrink) })]
         public void Setup_BitArrayByteArrayCtor() => _bytes = ValuesGenerator.Array<byte>(Size);
 
         [Benchmark]
@@ -51,7 +52,7 @@ namespace System.Collections.Tests
         [Benchmark]
         public BitArray BitArrayIntArrayCtor() => new BitArray(_ints);
 
-        [GlobalSetup(Targets = new [] { nameof(BitArraySetAll), nameof(BitArrayNot), nameof(BitArrayGet) })]
+        [GlobalSetup(Targets = new[] { nameof(BitArraySetAll), nameof(BitArrayNot), nameof(BitArrayGet) })]
         public void Setup_BitArraySetAll() => _original = new BitArray(ValuesGenerator.Array<byte>(Size));
 
         [Benchmark]
@@ -73,7 +74,7 @@ namespace System.Collections.Tests
         }
 
 #if !NETFRAMEWORK // API added in .NET Core 2.0
-        [GlobalSetup(Targets = new [] { nameof(BitArrayRightShift), nameof(BitArrayLeftShift) })]
+        [GlobalSetup(Targets = new[] { nameof(BitArrayRightShift), nameof(BitArrayLeftShift) })]
         public void Setup_BitArrayShift() => _original = new BitArray(ValuesGenerator.Array<byte>(Size));
 
         [Benchmark]
@@ -83,7 +84,7 @@ namespace System.Collections.Tests
         public void BitArrayLeftShift() => _original.LeftShift(DefaultShiftCount);
 #endif
 
-        [GlobalSetup(Targets = new [] { nameof(BitArrayAnd), nameof(BitArrayOr), nameof(BitArrayXor) })]
+        [GlobalSetup(Targets = new[] { nameof(BitArrayAnd), nameof(BitArrayOr), nameof(BitArrayXor) })]
         public void Setup_BitArrayAnd()
         {
             _original = new BitArray(ValuesGenerator.Array<byte>(Size));

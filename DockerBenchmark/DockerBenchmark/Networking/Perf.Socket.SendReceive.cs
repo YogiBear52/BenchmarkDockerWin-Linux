@@ -4,12 +4,15 @@
 
 // following benchmarks consume .NET Core 2.1 APIs and are disabled for other frameworks in .csproj file
 
+using System;
+using System.Net;
+using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 
-namespace System.Net.Sockets.Tests
+namespace DockerBenchmark.Networking
 {
     public class SocketSendReceivePerfTest
     {
@@ -27,15 +30,15 @@ namespace System.Net.Sockets.Tests
             _client.Dispose();
             _listener.Dispose();
         }
-        
+
         [Benchmark]
         public async Task SendAsyncThenReceiveAsync_Task()
         {
             Socket client = _client, server = _server;
-            
+
             ReadOnlyMemory<byte> clientBuffer = new byte[1];
             Memory<byte> serverBuffer = new byte[1];
-            
+
             for (int i = 0; i < InnerIterationCount; i++)
             {
                 await client.SendAsync(clientBuffer, SocketFlags.None);
@@ -47,10 +50,10 @@ namespace System.Net.Sockets.Tests
         public async Task ReceiveAsyncThenSendAsync_Task()
         {
             Socket client = _client, server = _server;
-            
+
             ReadOnlyMemory<byte> clientBuffer = new byte[1];
             Memory<byte> serverBuffer = new byte[1];
-            
+
             for (int i = 0; i < InnerIterationCount; i++)
             {
                 ValueTask<int> r = server.ReceiveAsync(serverBuffer, SocketFlags.None);
@@ -63,13 +66,13 @@ namespace System.Net.Sockets.Tests
         public async Task SendAsyncThenReceiveAsync_SocketAsyncEventArgs()
         {
             Socket client = _client, server = _server;
-            
+
             var clientSaea = new AwaitableSocketAsyncEventArgs();
             var serverSaea = new AwaitableSocketAsyncEventArgs();
-            
+
             clientSaea.SetBuffer(new byte[1], 0, 1);
             serverSaea.SetBuffer(new byte[1], 0, 1);
-            
+
             for (int i = 0; i < InnerIterationCount; i++)
             {
                 if (client.SendAsync(clientSaea))
@@ -114,7 +117,7 @@ namespace System.Net.Sockets.Tests
         {
             _listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             _client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            
+
             _listener.Bind(new IPEndPoint(IPAddress.Loopback, 0));
             _listener.Listen(1);
 

@@ -5,7 +5,7 @@
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
-namespace System.Net.Test.Common
+namespace DockerBenchmark.Networking
 {
     public static class Configuration
     {
@@ -17,7 +17,7 @@ namespace System.Net.Test.Common
 
             public static X509Certificate2 GetClientCertificate() => GetCertificate("testclienteku.contoso.com.pfx");
 
-            private static X509Certificate2 GetCertificate(string certificateFileName) 
+            private static X509Certificate2 GetCertificate(string certificateFileName)
                 => new X509Certificate2(
                     File.ReadAllBytes(Path.Combine("corefx", "System.Net.Http", certificateFileName)),
                     CertificatePassword,

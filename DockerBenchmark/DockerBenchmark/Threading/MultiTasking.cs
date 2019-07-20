@@ -1,5 +1,4 @@
 ﻿using BenchmarkDotNet.Attributes;
-using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DockerBenchmark.Threading
 {
-    public class AddHereSomethingJucy
+    public class Multitasking
     {
         [Params(100000)]
         public int number_of_tasks {get;set;}

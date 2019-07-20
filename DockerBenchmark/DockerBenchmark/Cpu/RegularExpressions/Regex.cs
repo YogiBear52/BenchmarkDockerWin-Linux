@@ -4,9 +4,10 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using BenchmarkDotNet.Attributes;
 
-namespace System.Text.RegularExpressions.Tests
+namespace DockerBenchmark.Cpu.RegularExpressions
 {
     /// <summary>
     /// Performance tests for Regular Expressions
@@ -23,7 +24,7 @@ namespace System.Text.RegularExpressions.Tests
             _cacheSizeOld = Regex.CacheSize;
             Regex.CacheSize = 0; // disable cache to get clearer results
         }
-        
+
         [GlobalCleanup]
         public void Cleanup() => Regex.CacheSize = _cacheSizeOld;
 
@@ -31,7 +32,7 @@ namespace System.Text.RegularExpressions.Tests
         public bool Match()
         {
             bool result = false;
-            
+
             foreach ((string pattern, string input, RegexOptions options) test in TestData)
                 result ^= Regex.Match(test.input, test.pattern, test.options).Success;
 
