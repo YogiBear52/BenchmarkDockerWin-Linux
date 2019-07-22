@@ -1,6 +1,7 @@
-﻿Draw Graph
+﻿Send all data from contains https://medium.com/@xavierpenya/how-to-download-zip-files-in-asp-net-core-f31b5c371998
 SIMD
 
+Draw Graph
 Memory (Use Benchmarkdotnet provider) - Show GC of some nice methods. Maybe write a method with Hight memory usage
 Publish dockers and Instaniate on Azure
 Mutex
@@ -8,19 +9,10 @@ Write Multitasking Method
 
 
 
-Publish new version:
-Windows:
-- docker build -t docker-benchmark-windows -f DockerBenchmark/Dockerfile .
-- docker tag docker-benchmark-windows yogevmizrahi/docker-benchmark-windows
-- docker push yogevmizrahi/docker-benchmark-windows
-
-Linux:
-- docker build -t docker-benchmark-linux -f DockerBenchmark/DockerfileLinux .
-- docker tag docker-benchmark-linux yogevmizrahi/docker-benchmark-linux
-- docker push yogevmizrahi/docker-benchmark-linux
-
-
 Run:
 - dotnet DockerBenchmark.dll --filter DateTimeBenchmark
 Azure:
 az container logs --resource-group YogevResourceGroup --name windows-benchmark
+
+Generate Plots:
+- "C:\Program Files\R\R-3.6.1\bin\Rscript.exe" BuildPlots.R DockerBenchmark.OS.MutexBenchmark-measurements.csv
