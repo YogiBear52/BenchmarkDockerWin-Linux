@@ -1,0 +1,39 @@
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=Windows 10.0.17763.0 (1809/October2018Update/Redstone5)
+Unknown processor
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|                 Method |  total | unique | cacheSize |      Mean |     Error |    StdDev |
+|----------------------- |------- |------- |---------- |----------:|----------:|----------:|
+|                IsMatch |  40000 |      7 |         0 | 135.43 ms | 2.2520 ms | 2.1065 ms |
+| IsMatch_Multithreading |  40000 |      7 |         0 |  97.23 ms | 1.8991 ms | 3.3261 ms |
+|                IsMatch |  40000 |   1600 |        15 | 321.79 ms | 6.2479 ms | 6.4162 ms |
+| IsMatch_Multithreading |  40000 |   1600 |        15 | 230.67 ms | 4.4149 ms | 4.5337 ms |
+|                IsMatch |  40000 |   1600 |       800 | 331.06 ms | 6.4200 ms | 8.1193 ms |
+| IsMatch_Multithreading |  40000 |   1600 |       800 | 264.85 ms | 3.3075 ms | 2.9320 ms |
+|                IsMatch |  40000 |   1600 |      3200 |  38.80 ms | 0.3420 ms | 0.3199 ms |
+| IsMatch_Multithreading |  40000 |   1600 |      3200 |  28.06 ms | 0.4015 ms | 0.3756 ms |
+|                IsMatch | 400000 |      1 |        15 | 135.72 ms | 1.9690 ms | 1.6442 ms |
+| IsMatch_Multithreading | 400000 |      1 |        15 | 123.88 ms | 1.6600 ms | 1.4715 ms |
+|                IsMatch | 400000 |      7 |        15 | 204.07 ms | 2.1756 ms | 2.0350 ms |
+| IsMatch_Multithreading | 400000 |      7 |        15 | 210.71 ms | 2.7021 ms | 2.5276 ms |
+
+// * Legends *
+  total     : Value of the 'total' parameter
+  unique    : Value of the 'unique' parameter
+  cacheSize : Value of the 'cacheSize' parameter
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  1 ms      : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:03:34 (214.74 sec), executed benchmarks: 12
+
+Global total time: 00:03:34 (214.76 sec), executed benchmarks: 12
+// * Artifacts cleanup *

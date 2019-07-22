@@ -14,7 +14,7 @@ namespace DockerBenchmark.Cpu.RegularExpressions
         static readonly string input = File.ReadAllText(
             Path.Combine(
                 Path.GetDirectoryName(typeof(RegexRedux).Assembly.Location),
-                "corefx", "System.Text.RegularExpressions", "content",
+                "cPU", "RegularExpressions", "content",
                 "200_000.in"));
 
         static Regex regex(string re, RegexOptions options)

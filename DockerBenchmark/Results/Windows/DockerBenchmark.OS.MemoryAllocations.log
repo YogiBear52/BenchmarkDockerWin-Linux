@@ -1,183 +1,20 @@
-// Validating benchmarks:
-// ***** BenchmarkRunner: Start   *****
-// ***** Found 2 benchmark(s) in total *****
-// ***** Building 1 exe(s) in Parallel: Start   *****
-// ***** Done, took 00:00:00 (0.01 sec)   *****
-// Found 2 benchmarks:
-//   MemoryAllocations.HeavyMemoryAllocation: Job-KEPDVG(Toolchain=InProcessEmitToolchain) [number_of_objects_to_allocate=1000]
-//   MemoryAllocations.HeavyMemoryAllocation: Job-KEPDVG(Toolchain=InProcessEmitToolchain) [number_of_objects_to_allocate=5000]
-
-Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)// **************************
-// Benchmark: MemoryAllocations.HeavyMemoryAllocation: Job-KEPDVG(Toolchain=InProcessEmitToolchain) [number_of_objects_to_allocate=1000]
-// *** Execute ***
-// Launch: 1 / 1
-
-// Benchmark Process Environment Information:
-// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
-// GC=Concurrent Workstation
-// Job: Job-KEPDVG(Toolchain=InProcessEmitToolchain)
-
-OverheadJitting  1: 1 op, 406100.00 ns, 406.1000 us/op
-WorkloadJitting  1: 1 op, 528011200.00 ns, 528.0112 ms/op
-
-WorkloadWarmup   1: 1 op, 489565700.00 ns, 489.5657 ms/op
-WorkloadWarmup   2: 1 op, 484872600.00 ns, 484.8726 ms/op
-WorkloadWarmup   3: 1 op, 484106500.00 ns, 484.1065 ms/op
-WorkloadWarmup   4: 1 op, 453502500.00 ns, 453.5025 ms/op
-WorkloadWarmup   5: 1 op, 412686000.00 ns, 412.6860 ms/op
-WorkloadWarmup   6: 1 op, 410506100.00 ns, 410.5061 ms/op
-WorkloadWarmup   7: 1 op, 412193700.00 ns, 412.1937 ms/op
-WorkloadWarmup   8: 1 op, 407249600.00 ns, 407.2496 ms/op
-WorkloadWarmup   9: 1 op, 488182500.00 ns, 488.1825 ms/op
-WorkloadWarmup  10: 1 op, 478021800.00 ns, 478.0218 ms/op
-
-WorkloadActual   1: 1 op, 490509800.00 ns, 490.5098 ms/op
-WorkloadActual   2: 1 op, 409458800.00 ns, 409.4588 ms/op
-WorkloadActual   3: 1 op, 412887700.00 ns, 412.8877 ms/op
-WorkloadActual   4: 1 op, 418526200.00 ns, 418.5262 ms/op
-WorkloadActual   5: 1 op, 408303300.00 ns, 408.3033 ms/op
-WorkloadActual   6: 1 op, 413772500.00 ns, 413.7725 ms/op
-WorkloadActual   7: 1 op, 408817800.00 ns, 408.8178 ms/op
-WorkloadActual   8: 1 op, 412501000.00 ns, 412.5010 ms/op
-WorkloadActual   9: 1 op, 406030800.00 ns, 406.0308 ms/op
-WorkloadActual  10: 1 op, 412823300.00 ns, 412.8233 ms/op
-WorkloadActual  11: 1 op, 427219200.00 ns, 427.2192 ms/op
-WorkloadActual  12: 1 op, 406805700.00 ns, 406.8057 ms/op
-WorkloadActual  13: 1 op, 408692100.00 ns, 408.6921 ms/op
-WorkloadActual  14: 1 op, 409054300.00 ns, 409.0543 ms/op
-WorkloadActual  15: 1 op, 408341600.00 ns, 408.3416 ms/op
-
-WorkloadResult   1: 1 op, 409458800.00 ns, 409.4588 ms/op
-WorkloadResult   2: 1 op, 412887700.00 ns, 412.8877 ms/op
-WorkloadResult   3: 1 op, 418526200.00 ns, 418.5262 ms/op
-WorkloadResult   4: 1 op, 408303300.00 ns, 408.3033 ms/op
-WorkloadResult   5: 1 op, 413772500.00 ns, 413.7725 ms/op
-WorkloadResult   6: 1 op, 408817800.00 ns, 408.8178 ms/op
-WorkloadResult   7: 1 op, 412501000.00 ns, 412.5010 ms/op
-WorkloadResult   8: 1 op, 406030800.00 ns, 406.0308 ms/op
-WorkloadResult   9: 1 op, 412823300.00 ns, 412.8233 ms/op
-WorkloadResult  10: 1 op, 406805700.00 ns, 406.8057 ms/op
-WorkloadResult  11: 1 op, 408692100.00 ns, 408.6921 ms/op
-WorkloadResult  12: 1 op, 409054300.00 ns, 409.0543 ms/op
-WorkloadResult  13: 1 op, 408341600.00 ns, 408.3416 ms/op
-GC:  8 3 1 52424608 1
-
-
-Mean = 410.4627 ms, StdErr = 0.9561 ms (0.23%); N = 13, StdDev = 3.4471 ms
-Min = 406.0308 ms, Q1 = 408.3225 ms, Median = 409.0543 ms, Q3 = 412.8555 ms, Max = 418.5262 ms
-IQR = 4.5331 ms, LowerFence = 401.5229 ms, UpperFence = 419.6551 ms
-ConfidenceInterval = [406.3346 ms; 414.5908 ms] (CI 99.9%), Margin = 4.1281 ms (1.01% of Mean)
-Skewness = 0.8, Kurtosis = 2.76, MValue = 2
-
-// **************************
-// Benchmark: MemoryAllocations.HeavyMemoryAllocation: Job-KEPDVG(Toolchain=InProcessEmitToolchain) [number_of_objects_to_allocate=5000]
-// *** Execute ***
-// Launch: 1 / 1
-
-// Benchmark Process Environment Information:
-// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
-// GC=Concurrent Workstation
-// Job: Job-KEPDVG(Toolchain=InProcessEmitToolchain)
-
-OverheadJitting  1: 1 op, 194300.00 ns, 194.3000 us/op
-WorkloadJitting  1: 1 op, 2095597200.00 ns, 2.0956 s/op
-
-WorkloadWarmup   1: 1 op, 2082527800.00 ns, 2.0825 s/op
-WorkloadWarmup   2: 1 op, 2093895400.00 ns, 2.0939 s/op
-WorkloadWarmup   3: 1 op, 2238497400.00 ns, 2.2385 s/op
-WorkloadWarmup   4: 1 op, 2121156500.00 ns, 2.1212 s/op
-WorkloadWarmup   5: 1 op, 2117337900.00 ns, 2.1173 s/op
-WorkloadWarmup   6: 1 op, 2088696900.00 ns, 2.0887 s/op
-WorkloadWarmup   7: 1 op, 2208744200.00 ns, 2.2087 s/op
-WorkloadWarmup   8: 1 op, 2114079100.00 ns, 2.1141 s/op
-
-WorkloadActual   1: 1 op, 2111996600.00 ns, 2.1120 s/op
-WorkloadActual   2: 1 op, 2102139900.00 ns, 2.1021 s/op
-WorkloadActual   3: 1 op, 2099974700.00 ns, 2.1000 s/op
-WorkloadActual   4: 1 op, 2141974500.00 ns, 2.1420 s/op
-WorkloadActual   5: 1 op, 2099674000.00 ns, 2.0997 s/op
-WorkloadActual   6: 1 op, 2092800600.00 ns, 2.0928 s/op
-WorkloadActual   7: 1 op, 2095263800.00 ns, 2.0953 s/op
-WorkloadActual   8: 1 op, 2130358900.00 ns, 2.1304 s/op
-WorkloadActual   9: 1 op, 2132945500.00 ns, 2.1329 s/op
-WorkloadActual  10: 1 op, 2222590600.00 ns, 2.2226 s/op
-WorkloadActual  11: 1 op, 2138091200.00 ns, 2.1381 s/op
-WorkloadActual  12: 1 op, 2113897400.00 ns, 2.1139 s/op
-WorkloadActual  13: 1 op, 2088508400.00 ns, 2.0885 s/op
-WorkloadActual  14: 1 op, 2087607100.00 ns, 2.0876 s/op
-WorkloadActual  15: 1 op, 2124139300.00 ns, 2.1241 s/op
-
-WorkloadResult   1: 1 op, 2111996600.00 ns, 2.1120 s/op
-WorkloadResult   2: 1 op, 2102139900.00 ns, 2.1021 s/op
-WorkloadResult   3: 1 op, 2099974700.00 ns, 2.1000 s/op
-WorkloadResult   4: 1 op, 2141974500.00 ns, 2.1420 s/op
-WorkloadResult   5: 1 op, 2099674000.00 ns, 2.0997 s/op
-WorkloadResult   6: 1 op, 2092800600.00 ns, 2.0928 s/op
-WorkloadResult   7: 1 op, 2095263800.00 ns, 2.0953 s/op
-WorkloadResult   8: 1 op, 2130358900.00 ns, 2.1304 s/op
-WorkloadResult   9: 1 op, 2132945500.00 ns, 2.1329 s/op
-WorkloadResult  10: 1 op, 2138091200.00 ns, 2.1381 s/op
-WorkloadResult  11: 1 op, 2113897400.00 ns, 2.1139 s/op
-WorkloadResult  12: 1 op, 2088508400.00 ns, 2.0885 s/op
-WorkloadResult  13: 1 op, 2087607100.00 ns, 2.0876 s/op
-WorkloadResult  14: 1 op, 2124139300.00 ns, 2.1241 s/op
-GC:  44 16 3 262182336 1
-
-
-Mean = 2.1114 s, StdErr = 0.0051 s (0.24%); N = 14, StdDev = 0.0190 s
-Min = 2.0876 s, Q1 = 2.0953 s, Median = 2.1071 s, Q3 = 2.1304 s, Max = 2.1420 s
-IQR = 0.0351 s, LowerFence = 2.0426 s, UpperFence = 2.1830 s
-ConfidenceInterval = [2.0900 s; 2.1328 s] (CI 99.9%), Margin = 0.0214 s (1.01% of Mean)
-Skewness = 0.28, Kurtosis = 1.42, MValue = 2
-
-Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
-// ***** BenchmarkRunner: Finish  *****
-
-// * Export *
-  BenchmarkDotNet.Artifacts\results\DockerBenchmark.OS.MemoryAllocations-report.csv
-  BenchmarkDotNet.Artifacts\results\DockerBenchmark.OS.MemoryAllocations-report-github.md
-  BenchmarkDotNet.Artifacts\results\DockerBenchmark.OS.MemoryAllocations-report.html
-  BenchmarkDotNet.Artifacts\results\DockerBenchmark.OS.MemoryAllocations-measurements.csv
-  BuildPlots.R
-  BenchmarkDotNet.Artifacts\results\DockerBenchmark.OS.MemoryAllocations-20190722-120113-boxplot.png
-  BenchmarkDotNet.Artifacts\results\DockerBenchmark.OS.MemoryAllocations-20190722-120113-barplot.png
-
-// * Detailed results *
-MemoryAllocations.HeavyMemoryAllocation: Job-KEPDVG(Toolchain=InProcessEmitToolchain) [number_of_objects_to_allocate=1000]
-Runtime = ; GC = 
-Mean = 410.4627 ms, StdErr = 0.9561 ms (0.23%); N = 13, StdDev = 3.4471 ms
-Min = 406.0308 ms, Q1 = 408.3225 ms, Median = 409.0543 ms, Q3 = 412.8555 ms, Max = 418.5262 ms
-IQR = 4.5331 ms, LowerFence = 401.5229 ms, UpperFence = 419.6551 ms
-ConfidenceInterval = [406.3346 ms; 414.5908 ms] (CI 99.9%), Margin = 4.1281 ms (1.01% of Mean)
-Skewness = 0.8, Kurtosis = 2.76, MValue = 2
--------------------- Histogram --------------------
-[404.748 ms ; 419.809 ms) | @@@@@@@@@@@@@
----------------------------------------------------
-
-MemoryAllocations.HeavyMemoryAllocation: Job-KEPDVG(Toolchain=InProcessEmitToolchain) [number_of_objects_to_allocate=5000]
-Runtime = ; GC = 
-Mean = 2.1114 s, StdErr = 0.0051 s (0.24%); N = 14, StdDev = 0.0190 s
-Min = 2.0876 s, Q1 = 2.0953 s, Median = 2.1071 s, Q3 = 2.1304 s, Max = 2.1420 s
-IQR = 0.0351 s, LowerFence = 2.0426 s, UpperFence = 2.1830 s
-ConfidenceInterval = [2.0900 s; 2.1328 s] (CI 99.9%), Margin = 0.0214 s (1.01% of Mean)
-Skewness = 0.28, Kurtosis = 1.42, MValue = 2
--------------------- Histogram --------------------
-[2.081 s ; 2.149 s) | @@@@@@@@@@@@@@
----------------------------------------------------
-
 // * Summary *
 
-BenchmarkDotNet=v0.11.5, OS=Windows 10.0.17763.615 (1809/October2018Update/Redstone5)
-Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
+BenchmarkDotNet=v0.11.5, OS=Windows 10.0.17763.0 (1809/October2018Update/Redstone5)
+Unknown processor
 .NET Core SDK=2.2.301
-  [Host] : .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
 
-Toolchain=InProcessEmitToolchain  
+Toolchain=InProcessEmitToolchain
 
-|                Method | number_of_objects_to_allocate |       Mean |     Error |    StdDev |      Gen 0 |      Gen 1 |     Gen 2 | Allocated |
-|---------------------- |------------------------------ |-----------:|----------:|----------:|-----------:|-----------:|----------:|----------:|
-| HeavyMemoryAllocation |                          1000 |   410.5 ms |  4.128 ms |  3.447 ms |  8000.0000 |  3000.0000 | 1000.0000 |     50 MB |
-| HeavyMemoryAllocation |                          5000 | 2,111.4 ms | 21.426 ms | 18.994 ms | 44000.0000 | 16000.0000 | 3000.0000 | 250.04 MB |
+|                Method | number_of_objects_to_allocate |       Mean |     Error |    StdDev |      Gen 0 |
+     Gen 1 |     Gen 2 | Allocated |
+|---------------------- |------------------------------ |-----------:|----------:|----------:|-----------:|-
+----------:|----------:|----------:|
+| HeavyMemoryAllocation |                          1000 |   231.4 ms |  2.634 ms |  2.464 ms |  8666.6667 |
+ 3666.6667 | 1000.0000 |     50 MB |
+| HeavyMemoryAllocation |                          5000 | 1,295.6 ms | 14.051 ms | 13.143 ms | 43000.0000 |
+16000.0000 | 3000.0000 | 250.03 MB |
 
 // * Legends *
   number_of_objects_to_allocate : Value of the 'number_of_objects_to_allocate' parameter
@@ -187,7 +24,8 @@ Toolchain=InProcessEmitToolchain
   Gen 0                         : GC Generation 0 collects per 1000 operations
   Gen 1                         : GC Generation 1 collects per 1000 operations
   Gen 2                         : GC Generation 2 collects per 1000 operations
-  Allocated                     : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Allocated                     : Allocated memory per single operation (managed only, inclusive, 1KB = 1024
+B)
   1 ms                          : 1 Millisecond (0.001 sec)
 
 // * Diagnostic Output - MemoryDiagnoser *
@@ -195,7 +33,7 @@ Toolchain=InProcessEmitToolchain
 
 // ***** BenchmarkRunner: End *****
 // ** Remained 0 benchmark(s) to run **
-Run time: 00:01:25 (85.8 sec), executed benchmarks: 2
+Run time: 00:00:51 (51.27 sec), executed benchmarks: 2
 
-Global total time: 00:01:25 (85.81 sec), executed benchmarks: 2
+Global total time: 00:00:51 (51.28 sec), executed benchmarks: 2
 // * Artifacts cleanup *

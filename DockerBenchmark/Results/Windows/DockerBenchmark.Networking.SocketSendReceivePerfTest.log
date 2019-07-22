@@ -1,0 +1,28 @@
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=Windows 10.0.17763.0 (1809/October2018Update/Redstone5)
+Unknown processor
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|                                         Method |      Mean |      Error |     StdDev |
+|----------------------------------------------- |----------:|-----------:|-----------:|
+|                 SendAsyncThenReceiveAsync_Task |  57.09 ms |  0.8705 ms |  0.8142 ms |
+|                 ReceiveAsyncThenSendAsync_Task | 531.03 ms | 10.4080 ms | 11.5684 ms |
+| SendAsyncThenReceiveAsync_SocketAsyncEventArgs |  52.34 ms |  0.7801 ms |  0.6915 ms |
+| ReceiveAsyncThenSendAsync_SocketAsyncEventArgs | 517.22 ms | 10.2536 ms | 14.7054 ms |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:01:04 (64.49 sec), executed benchmarks: 4
+
+Global total time: 00:01:04 (64.5 sec), executed benchmarks: 4
+// * Artifacts cleanup *

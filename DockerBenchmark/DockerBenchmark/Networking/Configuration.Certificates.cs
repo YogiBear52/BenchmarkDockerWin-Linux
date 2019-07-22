@@ -19,7 +19,7 @@ namespace DockerBenchmark.Networking
 
             private static X509Certificate2 GetCertificate(string certificateFileName)
                 => new X509Certificate2(
-                    File.ReadAllBytes(Path.Combine("corefx", "System.Net.Http", certificateFileName)),
+                    File.ReadAllBytes(Path.Combine("Networking", certificateFileName)),
                     CertificatePassword,
                     X509KeyStorageFlags.DefaultKeySet);
         }

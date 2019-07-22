@@ -1,0 +1,27 @@
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=Windows 10.0.17763.0 (1809/October2018Update/Redstone5)
+Unknown processor
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|                      Method |             Mean |            Error |           StdDev |
+|---------------------------- |-----------------:|-----------------:|-----------------:|
+|     ShortScheduleAndDispose |         323.8 ns |         4.504 ns |         4.213 ns |
+|      LongScheduleAndDispose |         312.6 ns |         3.901 ns |         3.458 ns |
+| ScheduleManyThenDisposeMany | 754,445,964.3 ns | 8,436,534.716 ns | 7,478,768.280 ns |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ns   : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:01:15 (75.49 sec), executed benchmarks: 3
+
+Global total time: 00:01:15 (75.49 sec), executed benchmarks: 3
+// * Artifacts cleanup *

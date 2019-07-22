@@ -7,19 +7,20 @@ Unknown processor
 
 Toolchain=InProcessEmitToolchain
 
-| Method |     Mean |     Error |    StdDev |
-|------- |---------:|----------:|----------:|
-| GetNow | 14.55 ns | 0.3859 ns | 0.3609 ns |
+|  Method |     Mean |     Error |    StdDev |
+|-------- |---------:|----------:|----------:|
+|   Match | 2.400 ms | 0.0453 ms | 0.0424 ms |
+| IsMatch | 2.422 ms | 0.0469 ms | 0.0540 ms |
 
 // * Legends *
   Mean   : Arithmetic mean of all measurements
   Error  : Half of 99.9% confidence interval
   StdDev : Standard deviation of all measurements
-  1 ns   : 1 Nanosecond (0.000000001 sec)
+  1 ms   : 1 Millisecond (0.001 sec)
 
 // ***** BenchmarkRunner: End *****
 // ** Remained 0 benchmark(s) to run **
-Run time: 00:00:20 (20.31 sec), executed benchmarks: 1
+Run time: 00:00:33 (33.98 sec), executed benchmarks: 2
 
-Global total time: 00:00:20 (20.32 sec), executed benchmarks: 1
+Global total time: 00:00:33 (33.98 sec), executed benchmarks: 2
 // * Artifacts cleanup *
