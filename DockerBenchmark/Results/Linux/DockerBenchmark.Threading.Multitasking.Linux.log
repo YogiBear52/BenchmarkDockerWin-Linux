@@ -1,0 +1,161 @@
+WorkloadResult   1: 5 op, 541662725.00 ns, 108.3325 ms/op
+WorkloadResult   2: 5 op, 544180513.00 ns, 108.8361 ms/op
+WorkloadResult   3: 5 op, 516679644.00 ns, 103.3359 ms/op
+WorkloadResult   4: 5 op, 536785848.00 ns, 107.3572 ms/op
+WorkloadResult   5: 5 op, 549048791.00 ns, 109.8098 ms/op
+WorkloadResult   6: 5 op, 510523274.00 ns, 102.1047 ms/op
+WorkloadResult   7: 5 op, 540705730.00 ns, 108.1411 ms/op
+WorkloadResult   8: 5 op, 551276180.00 ns, 110.2552 ms/op
+WorkloadResult   9: 5 op, 514948353.00 ns, 102.9897 ms/op
+WorkloadResult  10: 5 op, 514122357.00 ns, 102.8245 ms/op
+WorkloadResult  11: 5 op, 515544551.00 ns, 103.1089 ms/op
+WorkloadResult  12: 5 op, 515784249.00 ns, 103.1568 ms/op
+WorkloadResult  13: 5 op, 553391372.00 ns, 110.6783 ms/op
+WorkloadResult  14: 5 op, 536240853.00 ns, 107.2482 ms/op
+WorkloadResult  15: 5 op, 544615313.00 ns, 108.9231 ms/op
+WorkloadResult  16: 5 op, 522363020.00 ns, 104.4726 ms/op
+WorkloadResult  17: 5 op, 530672180.00 ns, 106.1344 ms/op
+WorkloadResult  18: 5 op, 510879874.00 ns, 102.1760 ms/op
+WorkloadResult  19: 5 op, 515040755.00 ns, 103.0082 ms/op
+WorkloadResult  20: 5 op, 538628343.00 ns, 107.7257 ms/op
+WorkloadResult  21: 5 op, 533884065.00 ns, 106.7768 ms/op
+WorkloadResult  22: 5 op, 531498877.00 ns, 106.2998 ms/op
+WorkloadResult  23: 5 op, 539902837.00 ns, 107.9806 ms/op
+WorkloadResult  24: 5 op, 541169131.00 ns, 108.2338 ms/op
+WorkloadResult  25: 5 op, 537169251.00 ns, 107.4339 ms/op
+GC:  0 0 0 0 0
+
+
+Mean = 106.2937 ms, StdErr = 0.5489 ms (0.52%); N = 25, StdDev = 2.7446 ms
+Min = 102.1047 ms, Q1 = 103.1329 ms, Median = 107.2482 ms, Q3 = 108.2832 ms, Max = 110.6783 ms
+IQR = 5.1503 ms, LowerFence = 95.4074 ms, UpperFence = 116.0086 ms
+ConfidenceInterval = [104.2378 ms; 108.3497 ms] (CI 99.9%), Margin = 2.0559 ms (1.93% of Mean)
+Skewness = -0.18, Kurtosis = 1.54, MValue = 2
+
+// **************************
+// Benchmark: Multitasking.RunningMultipleTasksSynchronously: Job-UHUVAU(Toolchain=InProcessEmitToolchain) [number_of_tasks=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// ! Failed to set up priority High for process System.Diagnostics.Process (dotnet). Make sure you have theright permissions. Message: Permission denied
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+
+OverheadJitting  1: 1 op, 187299.00 ns, 187.2990 us/op
+WorkloadJitting  1: 1 op, 177470458.00 ns, 177.4705 ms/op
+
+WorkloadPilot    1: 2 op, 343567469.00 ns, 171.7837 ms/op
+WorkloadPilot    2: 3 op, 504628005.00 ns, 168.2093 ms/op
+
+WorkloadWarmup   1: 3 op, 514721157.00 ns, 171.5737 ms/op
+WorkloadWarmup   2: 3 op, 509374883.00 ns, 169.7916 ms/op
+WorkloadWarmup   3: 3 op, 515807452.00 ns, 171.9358 ms/op
+WorkloadWarmup   4: 3 op, 522869719.00 ns, 174.2899 ms/op
+WorkloadWarmup   5: 3 op, 531817677.00 ns, 177.2726 ms/op
+WorkloadWarmup   6: 3 op, 523112518.00 ns, 174.3708 ms/op
+WorkloadWarmup   7: 3 op, 499601730.00 ns, 166.5339 ms/op
+WorkloadWarmup   8: 3 op, 511063476.00 ns, 170.3545 ms/op
+WorkloadWarmup   9: 3 op, 525774306.00 ns, 175.2581 ms/op
+WorkloadWarmup  10: 3 op, 517271047.00 ns, 172.4237 ms/op
+
+WorkloadActual   1: 3 op, 507129895.00 ns, 169.0433 ms/op
+WorkloadActual   2: 3 op, 516058052.00 ns, 172.0194 ms/op
+WorkloadActual   3: 3 op, 521673426.00 ns, 173.8911 ms/op
+WorkloadActual   4: 3 op, 514842559.00 ns, 171.6142 ms/op
+WorkloadActual   5: 3 op, 519095839.00 ns, 173.0319 ms/op
+WorkloadActual   6: 3 op, 531987378.00 ns, 177.3291 ms/op
+WorkloadActual   7: 3 op, 523492019.00 ns, 174.4973 ms/op
+WorkloadActual   8: 3 op, 509433185.00 ns, 169.8111 ms/op
+WorkloadActual   9: 3 op, 519255238.00 ns, 173.0851 ms/op
+WorkloadActual  10: 3 op, 512627670.00 ns, 170.8759 ms/op
+WorkloadActual  11: 3 op, 512186272.00 ns, 170.7288 ms/op
+WorkloadActual  12: 3 op, 511412176.00 ns, 170.4707 ms/op
+WorkloadActual  13: 3 op, 516303853.00 ns, 172.1013 ms/op
+WorkloadActual  14: 3 op, 539134345.00 ns, 179.7114 ms/op
+WorkloadActual  15: 3 op, 515057860.00 ns, 171.6860 ms/op
+
+WorkloadResult   1: 3 op, 507129895.00 ns, 169.0433 ms/op
+WorkloadResult   2: 3 op, 516058052.00 ns, 172.0194 ms/op
+WorkloadResult   3: 3 op, 521673426.00 ns, 173.8911 ms/op
+WorkloadResult   4: 3 op, 514842559.00 ns, 171.6142 ms/op
+WorkloadResult   5: 3 op, 519095839.00 ns, 173.0319 ms/op
+WorkloadResult   6: 3 op, 531987378.00 ns, 177.3291 ms/op
+WorkloadResult   7: 3 op, 523492019.00 ns, 174.4973 ms/op
+WorkloadResult   8: 3 op, 509433185.00 ns, 169.8111 ms/op
+WorkloadResult   9: 3 op, 519255238.00 ns, 173.0851 ms/op
+WorkloadResult  10: 3 op, 512627670.00 ns, 170.8759 ms/op
+WorkloadResult  11: 3 op, 512186272.00 ns, 170.7288 ms/op
+WorkloadResult  12: 3 op, 511412176.00 ns, 170.4707 ms/op
+WorkloadResult  13: 3 op, 516303853.00 ns, 172.1013 ms/op
+WorkloadResult  14: 3 op, 515057860.00 ns, 171.6860 ms/op
+GC:  0 0 0 0 0
+
+
+Mean = 172.1561 ms, StdErr = 0.5700 ms (0.33%); N = 14, StdDev = 2.1326 ms
+Min = 169.0433 ms, Q1 = 170.7288 ms, Median = 171.8527 ms, Q3 = 173.0851 ms, Max = 177.3291 ms
+IQR = 2.3563 ms, LowerFence = 167.1943 ms, UpperFence = 176.6196 ms
+ConfidenceInterval = [169.7504 ms; 174.5618 ms] (CI 99.9%), Margin = 2.4057 ms (1.40% of Mean)
+Skewness = 0.77, Kurtosis = 3.09, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.Threading.Multitasking-report.csv
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.Threading.Multitasking-report-github.md
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.Threading.Multitasking-report.html
+
+// * Detailed results *
+Multitasking.CuncurrentInsertionsToDictionary: Job-UHUVAU(Toolchain=InProcessEmitToolchain) [number_of_tasks=100000]
+Runtime = ; GC =
+Mean = 106.2937 ms, StdErr = 0.5489 ms (0.52%); N = 25, StdDev = 2.7446 ms
+Min = 102.1047 ms, Q1 = 103.1329 ms, Median = 107.2482 ms, Q3 = 108.2832 ms, Max = 110.6783 ms
+IQR = 5.1503 ms, LowerFence = 95.4074 ms, UpperFence = 116.0086 ms
+ConfidenceInterval = [104.2378 ms; 108.3497 ms] (CI 99.9%), Margin = 2.0559 ms (1.93% of Mean)
+Skewness = -0.18, Kurtosis = 1.54, MValue = 2
+-------------------- Histogram --------------------
+[101.693 ms ; 105.155 ms) | @@@@@@@@@
+[105.155 ms ; 108.630 ms) | @@@@@@@@@@@
+[108.630 ms ; 111.500 ms) | @@@@@
+---------------------------------------------------
+
+Multitasking.RunningMultipleTasksSynchronously: Job-UHUVAU(Toolchain=InProcessEmitToolchain) [number_of_tasks=100000]
+Runtime = ; GC =
+Mean = 172.1561 ms, StdErr = 0.5700 ms (0.33%); N = 14, StdDev = 2.1326 ms
+Min = 169.0433 ms, Q1 = 170.7288 ms, Median = 171.8527 ms, Q3 = 173.0851 ms, Max = 177.3291 ms
+IQR = 2.3563 ms, LowerFence = 167.1943 ms, UpperFence = 176.6196 ms
+ConfidenceInterval = [169.7504 ms; 174.5618 ms] (CI 99.9%), Margin = 2.4057 ms (1.40% of Mean)
+Skewness = 0.77, Kurtosis = 3.09, MValue = 2
+-------------------- Histogram --------------------
+[168.269 ms ; 173.129 ms) | @@@@@@@@@@@
+[173.129 ms ; 178.103 ms) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=debian 9
+Intel Xeon CPU E5-2673 v4 2.30GHz, 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|                            Method | number_of_tasks |     Mean |    Error |   StdDev |
+|---------------------------------- |---------------- |---------:|---------:|---------:|
+|  CuncurrentInsertionsToDictionary |          100000 | 106.3 ms | 2.056 ms | 2.745 ms |
+| RunningMultipleTasksSynchronously |          100000 | 172.2 ms | 2.406 ms | 2.133 ms |
+
+// * Legends *
+  number_of_tasks : Value of the 'number_of_tasks' parameter
+  Mean            : Arithmetic mean of all measurements
+  Error           : Half of 99.9% confidence interval
+  StdDev          : Standard deviation of all measurements
+  1 ms            : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:32 (32.88 sec), executed benchmarks: 2
+
+Global total time: 00:00:32 (32.89 sec), executed benchmarks: 2
+// * Artifacts cleanup *

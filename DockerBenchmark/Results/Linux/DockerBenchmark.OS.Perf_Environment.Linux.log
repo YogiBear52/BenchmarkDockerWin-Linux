@@ -1,0 +1,86 @@
+WorkloadResult   8: 65536 op, 524738076.50 ns, 8.0069 us/op
+WorkloadResult   9: 65536 op, 546231130.50 ns, 8.3348 us/op
+WorkloadResult  10: 65536 op, 532581421.50 ns, 8.1265 us/op
+WorkloadResult  11: 65536 op, 527550282.50 ns, 8.0498 us/op
+WorkloadResult  12: 65536 op, 534494223.50 ns, 8.1557 us/op
+WorkloadResult  13: 65536 op, 525647557.50 ns, 8.0207 us/op
+WorkloadResult  14: 65536 op, 544849187.50 ns, 8.3137 us/op
+WorkloadResult  15: 65536 op, 530156877.50 ns, 8.0896 us/op
+GC:  0 0 0 0 0
+
+
+Mean = 8.1186 us, StdErr = 0.0261 us (0.32%); N = 15, StdDev = 0.1011 us
+Min = 8.0069 us, Q1 = 8.0373 us, Median = 8.0939 us, Q3 = 8.1719 us, Max = 8.3348 us
+IQR = 0.1346 us, LowerFence = 7.8355 us, UpperFence = 8.3738 us
+ConfidenceInterval = [8.0106 us; 8.2266 us] (CI 99.9%), Margin = 0.1080 us (1.33% of Mean)
+Skewness = 0.88, Kurtosis = 2.61, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.OS.Perf_Environment-report.csv
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.OS.Perf_Environment-report-github.md
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.OS.Perf_Environment-report.html
+
+// * Detailed results *
+Perf_Environment.GetEnvironmentVariable: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+Runtime = ; GC =
+Mean = 689.6155 ns, StdErr = 2.1931 ns (0.32%); N = 15, StdDev = 8.4940 ns
+Min = 678.5302 ns, Q1 = 683.8250 ns, Median = 688.4851 ns, Q3 = 695.2859 ns, Max = 708.1961 ns
+IQR = 11.4609 ns, LowerFence = 666.6336 ns, UpperFence = 712.4773 ns
+ConfidenceInterval = [680.5349 ns; 698.6961 ns] (CI 99.9%), Margin = 9.0806 ns (1.32% of Mean)
+Skewness = 0.67, Kurtosis = 2.37, MValue = 2
+-------------------- Histogram --------------------
+[675.517 ns ; 693.081 ns) | @@@@@@@@@@
+[693.081 ns ; 711.210 ns) | @@@@@
+---------------------------------------------------
+
+Perf_Environment.ExpandEnvironmentVariables: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+Runtime = ; GC =
+Mean = 834.1014 ns, StdErr = 2.0517 ns (0.25%); N = 14, StdDev = 7.6769 ns
+Min = 821.0909 ns, Q1 = 831.3897 ns, Median = 833.6367 ns, Q3 = 839.0379 ns, Max = 850.0817 ns
+IQR = 7.6483 ns, LowerFence = 819.9173 ns, UpperFence = 850.5103 ns
+ConfidenceInterval = [825.4413 ns; 842.7614 ns] (CI 99.9%), Margin = 8.6600 ns (1.04% of Mean)
+Skewness = 0.1, Kurtosis = 2.42, MValue = 2
+-------------------- Histogram --------------------
+[818.304 ns ; 852.869 ns) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+Perf_Environment.GetEnvironmentVariables: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+Runtime = ; GC =
+Mean = 8.1186 us, StdErr = 0.0261 us (0.32%); N = 15, StdDev = 0.1011 us
+Min = 8.0069 us, Q1 = 8.0373 us, Median = 8.0939 us, Q3 = 8.1719 us, Max = 8.3348 us
+IQR = 0.1346 us, LowerFence = 7.8355 us, UpperFence = 8.3738 us
+ConfidenceInterval = [8.0106 us; 8.2266 us] (CI 99.9%), Margin = 0.1080 us (1.33% of Mean)
+Skewness = 0.88, Kurtosis = 2.61, MValue = 2
+-------------------- Histogram --------------------
+[7.971 us ; 8.371 us) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=debian 9
+Intel Xeon CPU E5-2673 v4 2.30GHz, 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|                     Method |       Mean |      Error |     StdDev |
+|--------------------------- |-----------:|-----------:|-----------:|
+|     GetEnvironmentVariable |   689.6 ns |   9.081 ns |   8.494 ns |
+| ExpandEnvironmentVariables |   834.1 ns |   8.660 ns |   7.677 ns |
+|    GetEnvironmentVariables | 8,118.6 ns | 108.036 ns | 101.057 ns |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ns   : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:55 (55.34 sec), executed benchmarks: 3
+
+Global total time: 00:00:55 (55.34 sec), executed benchmarks: 3
+// * Artifacts cleanup *

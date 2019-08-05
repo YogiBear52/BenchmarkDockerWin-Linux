@@ -1,0 +1,38 @@
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=debian 9
+Intel Xeon CPU E5-2673 v4 2.30GHz, 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|                 Method |  total | unique | cacheSize |      Mean |     Error |    StdDev |
+|----------------------- |------- |------- |---------- |----------:|----------:|----------:|
+|                IsMatch |  40000 |      7 |         0 | 141.84 ms | 1.9767 ms | 1.7523 ms |
+| IsMatch_Multithreading |  40000 |      7 |         0 |  88.71 ms | 1.7064 ms | 2.2188 ms |
+|                IsMatch |  40000 |   1600 |        15 | 361.47 ms | 4.3030 ms | 4.0250 ms |
+| IsMatch_Multithreading |  40000 |   1600 |        15 | 228.08 ms | 4.5518 ms | 4.2578 ms |
+|                IsMatch |  40000 |   1600 |       800 | 306.33 ms | 4.0080 ms | 3.7491 ms |
+| IsMatch_Multithreading |  40000 |   1600 |       800 | 250.78 ms | 4.5853 ms | 4.2891 ms |
+|                IsMatch |  40000 |   1600 |      3200 |  38.21 ms | 0.5552 ms | 0.5193 ms |
+| IsMatch_Multithreading |  40000 |   1600 |      3200 |  28.82 ms | 0.2782 ms | 0.2602 ms |
+|                IsMatch | 400000 |      1 |        15 | 130.66 ms | 2.4728 ms | 2.3131 ms |
+| IsMatch_Multithreading | 400000 |      1 |        15 | 130.49 ms | 2.4335 ms | 2.2763 ms |
+|                IsMatch | 400000 |      7 |        15 | 197.33 ms | 3.1163 ms | 2.9150 ms |
+| IsMatch_Multithreading | 400000 |      7 |        15 | 229.71 ms | 2.5545 ms | 2.2645 ms |
+
+// * Legends *
+  total     : Value of the 'total' parameter
+  unique    : Value of the 'unique' parameter
+  cacheSize : Value of the 'cacheSize' parameter
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  1 ms      : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:03:15 (195.06 sec), executed benchmarks: 12
+
+Global total time: 00:03:15 (195.08 sec), executed benchmarks: 12

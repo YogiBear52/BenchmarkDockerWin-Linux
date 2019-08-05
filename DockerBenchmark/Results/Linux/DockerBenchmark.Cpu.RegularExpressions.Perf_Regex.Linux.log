@@ -1,0 +1,25 @@
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=debian 9
+Intel Xeon CPU E5-2673 v4 2.30GHz, 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|  Method |     Mean |     Error |    StdDev |
+|-------- |---------:|----------:|----------:|
+|   Match | 2.375 ms | 0.0312 ms | 0.0292 ms |
+| IsMatch | 2.341 ms | 0.0209 ms | 0.0174 ms |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:33 (33.42 sec), executed benchmarks: 2
+
+Global total time: 00:00:33 (33.43 sec), executed benchmarks: 2

@@ -1,0 +1,48 @@
+Perf_File.Delete: Job-EZKTSW(Toolchain=InProcessEmitToolchain, InvocationCount=1, UnrollFactor=1)
+Runtime = ; GC =
+Mean = 10.9650 us, StdErr = 0.2196 us (2.00%); N = 96, StdDev = 2.1520 us
+Min = 8.6400 us, Q1 = 9.4550 us, Median = 9.8350 us, Q3 = 12.4600 us, Max = 17.4900 us
+IQR = 3.0050 us, LowerFence = 4.9475 us, UpperFence = 16.9675 us
+ConfidenceInterval = [10.2192 us; 11.7109 us] (CI 99.9%), Margin = 0.7459 us (6.80% of Mean)
+Skewness = 1.26, Kurtosis = 3.82, MValue = 2.7
+-------------------- Histogram --------------------
+[ 8.229 us ;  9.039 us) | @@@@@@
+[ 9.039 us ;  9.861 us) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[ 9.861 us ; 10.459 us) | @@@@
+[10.459 us ; 11.419 us) | @@@@@@@@@@
+[11.419 us ; 12.399 us) | @@@@@@
+[12.399 us ; 13.221 us) | @@@@@@@@@@
+[13.221 us ; 13.754 us) | @@
+[13.754 us ; 14.576 us) | @@@@@@@
+[14.576 us ; 15.526 us) | @@
+[15.526 us ; 16.451 us) | @
+[16.451 us ; 17.019 us) |
+[17.019 us ; 17.901 us) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=debian 9
+Intel Xeon CPU E5-2673 v4 2.30GHz, 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain  InvocationCount=1
+
+| Method | UnrollFactor |      Mean |     Error |    StdDev |   Median |
+|------- |------------- |----------:|----------:|----------:|---------:|
+| Exists |           16 |  1.762 us | 0.0134 us | 0.0104 us | 1.766 us |
+| Delete |            1 | 10.965 us | 0.7459 us | 2.1520 us | 9.835 us |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  1 us   : 1 Microsecond (0.000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:23 (23.21 sec), executed benchmarks: 2
+
+Global total time: 00:00:23 (23.21 sec), executed benchmarks: 2

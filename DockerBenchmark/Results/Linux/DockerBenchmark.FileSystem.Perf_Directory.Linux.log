@@ -1,0 +1,97 @@
+Mean = 3.3519 us, StdErr = 0.1126 us (3.36%); N = 96, StdDev = 1.1030 us
+Min = 2.5800 us, Q1 = 2.7400 us, Median = 2.7800 us, Q3 = 3.1500 us, Max = 6.6500 us
+IQR = 0.4100 us, LowerFence = 2.1250 us, UpperFence = 3.7650 us
+ConfidenceInterval = [2.9696 us; 3.7342 us] (CI 99.9%), Margin = 0.3823 us (11.41% of Mean)
+Skewness = 1.75, Kurtosis = 4.87, MValue = 2.5
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.FileSystem.Perf_Directory-report.csv
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.FileSystem.Perf_Directory-report-github.md
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.FileSystem.Perf_Directory-report.html
+
+// * Detailed results *
+Perf_Directory.GetCurrentDirectory: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+Runtime = ; GC =
+Mean = 894.3564 ns, StdErr = 2.1926 ns (0.25%); N = 14, StdDev = 8.2041 ns
+Min = 879.2138 ns, Q1 = 890.4735 ns, Median = 893.1718 ns, Q3 = 899.9163 ns, Max = 912.5815 ns
+IQR = 9.4427 ns, LowerFence = 876.3094 ns, UpperFence = 914.0804 ns
+ConfidenceInterval = [885.1017 ns; 903.6112 ns] (CI 99.9%), Margin = 9.2548 ns (1.03% of Mean)
+Skewness = 0.27, Kurtosis = 2.89, MValue = 2
+-------------------- Histogram --------------------
+[876.235 ns ; 915.560 ns) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+Perf_Directory.Exists: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+Runtime = ; GC =
+Mean = 1.7454 us, StdErr = 0.0062 us (0.35%); N = 15, StdDev = 0.0238 us
+Min = 1.7098 us, Q1 = 1.7274 us, Median = 1.7439 us, Q3 = 1.7655 us, Max = 1.7801 us
+IQR = 0.0381 us, LowerFence = 1.6702 us, UpperFence = 1.8227 us
+ConfidenceInterval = [1.7199 us; 1.7709 us] (CI 99.9%), Margin = 0.0255 us (1.46% of Mean)
+Skewness = -0.02, Kurtosis = 1.54, MValue = 2
+-------------------- Histogram --------------------
+[1.701 us ; 1.789 us) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Perf_Directory.GetLogicalDrives: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+Runtime = ; GC =
+Mean = 73.2388 us, StdErr = 0.2172 us (0.30%); N = 14, StdDev = 0.8125 us
+Min = 71.5069 us, Q1 = 73.2729 us, Median = 73.3490 us, Q3 = 73.5704 us, Max = 74.5377 us
+IQR = 0.2975 us, LowerFence = 72.8267 us, UpperFence = 74.0166 us
+ConfidenceInterval = [72.3222 us; 74.1554 us] (CI 99.9%), Margin = 0.9166 us (1.25% of Mean)
+Skewness = -0.67, Kurtosis = 2.63, MValue = 2
+-------------------- Histogram --------------------
+[71.399 us ; 74.833 us) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+Perf_Directory.CreateDirectory: Job-EZKTSW(Toolchain=InProcessEmitToolchain, InvocationCount=1, UnrollFactor=1)
+Runtime = ; GC =
+Mean = 3.3519 us, StdErr = 0.1126 us (3.36%); N = 96, StdDev = 1.1030 us
+Min = 2.5800 us, Q1 = 2.7400 us, Median = 2.7800 us, Q3 = 3.1500 us, Max = 6.6500 us
+IQR = 0.4100 us, LowerFence = 2.1250 us, UpperFence = 3.7650 us
+ConfidenceInterval = [2.9696 us; 3.7342 us] (CI 99.9%), Margin = 0.3823 us (11.41% of Mean)
+Skewness = 1.75, Kurtosis = 4.87, MValue = 2.5
+-------------------- Histogram --------------------
+[2.369 us ; 2.649 us) | @
+[2.649 us ; 3.071 us) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[3.071 us ; 3.331 us) | @@@@
+[3.331 us ; 3.752 us) |
+[3.752 us ; 4.284 us) |
+[4.284 us ; 4.706 us) | @@@@@@@@@@@@@@
+[4.706 us ; 5.001 us) | @
+[5.001 us ; 5.422 us) |
+[5.422 us ; 5.844 us) |
+[5.844 us ; 6.084 us) |
+[6.084 us ; 6.506 us) | @@@@@@
+[6.506 us ; 6.861 us) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=debian 9
+Intel Xeon CPU E5-2673 v4 2.30GHz, 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain  InvocationCount=1
+
+|              Method | UnrollFactor |        Mean |      Error |       StdDev |      Median |
+|-------------------- |------------- |------------:|-----------:|-------------:|------------:|
+| GetCurrentDirectory |           16 |    894.4 ns |   9.255 ns |     8.204 ns |    893.2 ns |
+|              Exists |           16 |  1,745.4 ns |  25.491 ns |    23.844 ns |  1,743.9 ns |
+|    GetLogicalDrives |           16 | 73,238.8 ns | 916.586 ns |   812.530 ns | 73,349.0 ns |
+|     CreateDirectory |            1 |  3,351.9 ns | 382.287 ns | 1,102.984 ns |  2,780.0 ns |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  1 ns   : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:01:01 (61.64 sec), executed benchmarks: 4
+
+Global total time: 00:01:01 (61.64 sec), executed benchmarks: 4

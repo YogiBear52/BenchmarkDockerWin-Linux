@@ -1,0 +1,18 @@
+Toolchain=InProcessEmitToolchain
+
+|                   Method |     Mean |     Error |    StdDev |
+|------------------------- |---------:|----------:|----------:|
+| ReaderWriterLockSlimPerf | 45.99 ns | 0.5125 ns | 0.4543 ns |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ns   : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:19 (19.67 sec), executed benchmarks: 1
+
+Global total time: 00:00:19 (19.67 sec), executed benchmarks: 1
+// * Artifacts cleanup *

@@ -13,6 +13,8 @@ Run:
 - dotnet DockerBenchmark.dll --filter DateTimeBenchmark
 Azure:
 az container logs --resource-group YogevResourceGroup --name windows-benchmark
+az container exec --resource-group YogevResourceGroup --name linux-benchamrk2 --exec-command "/bin/bash"
+az container exec --resource-group YogevResourceGroup --name windows-benchmark2 --exec-command "cmd"
 
 Generate Plots:
 - "C:\Program Files\R\R-3.6.1\bin\Rscript.exe" BuildPlots.R DockerBenchmark.OS.MutexBenchmark-measurements.csv

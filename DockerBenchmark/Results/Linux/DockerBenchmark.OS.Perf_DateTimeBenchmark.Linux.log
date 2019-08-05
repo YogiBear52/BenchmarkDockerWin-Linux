@@ -1,0 +1,62 @@
+Mean = 34.7433 ns, StdErr = 0.0947 ns (0.27%); N = 15, StdDev = 0.3666 ns
+Min = 34.1735 ns, Q1 = 34.5782 ns, Median = 34.6510 ns, Q3 = 34.9770 ns, Max = 35.4120 ns
+IQR = 0.3987 ns, LowerFence = 33.9801 ns, UpperFence = 35.5751 ns
+ConfidenceInterval = [34.3514 ns; 35.1352 ns] (CI 99.9%), Margin = 0.3919 ns (1.13% of Mean)
+Skewness = 0.32, Kurtosis = 1.97, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.OS.Perf_DateTimeBenchmark-report.csv
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.OS.Perf_DateTimeBenchmark-report-github.md
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.OS.Perf_DateTimeBenchmark-report.html
+
+// * Detailed results *
+Perf_DateTimeBenchmark.GetNow: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+Runtime = ; GC =
+Mean = 117.1770 ns, StdErr = 0.3432 ns (0.29%); N = 15, StdDev = 1.3293 ns
+Min = 115.1798 ns, Q1 = 116.2340 ns, Median = 117.2241 ns, Q3 = 117.7967 ns, Max = 119.9152 ns
+IQR = 1.5627 ns, LowerFence = 113.8899 ns, UpperFence = 120.1408 ns
+ConfidenceInterval = [115.7560 ns; 118.5981 ns] (CI 99.9%), Margin = 1.4211 ns (1.21% of Mean)
+Skewness = 0.58, Kurtosis = 2.41, MValue = 2
+-------------------- Histogram --------------------
+[114.708 ns ; 120.387 ns) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+Perf_DateTimeBenchmark.GetUtcNow: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+Runtime = ; GC =
+Mean = 34.7433 ns, StdErr = 0.0947 ns (0.27%); N = 15, StdDev = 0.3666 ns
+Min = 34.1735 ns, Q1 = 34.5782 ns, Median = 34.6510 ns, Q3 = 34.9770 ns, Max = 35.4120 ns
+IQR = 0.3987 ns, LowerFence = 33.9801 ns, UpperFence = 35.5751 ns
+ConfidenceInterval = [34.3514 ns; 35.1352 ns] (CI 99.9%), Margin = 0.3919 ns (1.13% of Mean)
+Skewness = 0.32, Kurtosis = 1.97, MValue = 2
+-------------------- Histogram --------------------
+[34.043 ns ; 35.542 ns) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=debian 9
+Intel Xeon CPU E5-2673 v4 2.30GHz, 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|    Method |      Mean |     Error |    StdDev |
+|---------- |----------:|----------:|----------:|
+|    GetNow | 117.18 ns | 1.4211 ns | 1.3293 ns |
+| GetUtcNow |  34.74 ns | 0.3919 ns | 0.3666 ns |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ns   : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:29 (29.44 sec), executed benchmarks: 2
+
+Global total time: 00:00:29 (29.45 sec), executed benchmarks: 2
+// * Artifacts cleanup *

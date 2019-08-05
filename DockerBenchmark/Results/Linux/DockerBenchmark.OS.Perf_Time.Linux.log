@@ -1,0 +1,39 @@
+Perf_Timer.ScheduleManyThenDisposeMany: Job-UHUVAU(Toolchain=InProcessEmitToolchain)
+Runtime = ; GC =
+Mean = 664.0944 ms, StdErr = 2.6303 ms (0.40%); N = 15, StdDev = 10.1871 ms
+Min = 652.0611 ms, Q1 = 654.1124 ms, Median = 662.8689 ms, Q3 = 672.7648 ms, Max = 684.7295 ms
+IQR = 18.6524 ms, LowerFence = 626.1339 ms, UpperFence = 700.7434 ms
+ConfidenceInterval = [653.2038 ms; 674.9850 ms] (CI 99.9%), Margin = 10.8906 ms (1.64% of Mean)
+Skewness = 0.53, Kurtosis = 1.95, MValue = 2
+-------------------- Histogram --------------------
+[648.447 ms ; 662.088 ms) | @@@@@@@
+[662.088 ms ; 688.344 ms) | @@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=debian 9
+Intel Xeon CPU E5-2673 v4 2.30GHz, 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|                      Method |             Mean |             Error |            StdDev |
+|---------------------------- |-----------------:|------------------:|------------------:|
+|     ShortScheduleAndDispose |         288.1 ns |          5.335 ns |          4.990 ns |
+|      LongScheduleAndDispose |         281.7 ns |          3.459 ns |          3.235 ns |
+| ScheduleManyThenDisposeMany | 664,094,366.3 ns | 10,890,597.710 ns | 10,187,071.855 ns |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ns   : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:01:04 (64.97 sec), executed benchmarks: 3
+
+Global total time: 00:01:04 (64.98 sec), executed benchmarks: 3
+// * Artifacts cleanup *

@@ -1,0 +1,114 @@
+
+WorkloadWarmup   1: 1 op, 1514423136.00 ns, 1.5144 s/op
+WorkloadWarmup   2: 1 op, 1466615463.00 ns, 1.4666 s/op
+WorkloadWarmup   3: 1 op, 1523188897.00 ns, 1.5232 s/op
+WorkloadWarmup   4: 1 op, 1474196529.00 ns, 1.4742 s/op
+WorkloadWarmup   5: 1 op, 1458582505.00 ns, 1.4586 s/op
+WorkloadWarmup   6: 1 op, 1469220356.00 ns, 1.4692 s/op
+WorkloadWarmup   7: 1 op, 1487889768.00 ns, 1.4879 s/op
+WorkloadWarmup   8: 1 op, 1471513447.00 ns, 1.4715 s/op
+
+WorkloadActual   1: 1 op, 1498707919.00 ns, 1.4987 s/op
+WorkloadActual   2: 1 op, 1477274421.00 ns, 1.4773 s/op
+WorkloadActual   3: 1 op, 1487750073.00 ns, 1.4878 s/op
+WorkloadActual   4: 1 op, 1465524980.00 ns, 1.4655 s/op
+WorkloadActual   5: 1 op, 1477935821.00 ns, 1.4779 s/op
+WorkloadActual   6: 1 op, 1472877047.00 ns, 1.4729 s/op
+WorkloadActual   7: 1 op, 1474815738.00 ns, 1.4748 s/op
+WorkloadActual   8: 1 op, 1478526822.00 ns, 1.4785 s/op
+WorkloadActual   9: 1 op, 1506617191.00 ns, 1.5066 s/op
+WorkloadActual  10: 1 op, 1464895088.00 ns, 1.4649 s/op
+WorkloadActual  11: 1 op, 1492509860.00 ns, 1.4925 s/op
+WorkloadActual  12: 1 op, 1479861820.00 ns, 1.4799 s/op
+WorkloadActual  13: 1 op, 1492692861.00 ns, 1.4927 s/op
+WorkloadActual  14: 1 op, 1467064982.00 ns, 1.4671 s/op
+WorkloadActual  15: 1 op, 1487914985.00 ns, 1.4879 s/op
+
+WorkloadResult   1: 1 op, 1498707919.00 ns, 1.4987 s/op
+WorkloadResult   2: 1 op, 1477274421.00 ns, 1.4773 s/op
+WorkloadResult   3: 1 op, 1487750073.00 ns, 1.4878 s/op
+WorkloadResult   4: 1 op, 1465524980.00 ns, 1.4655 s/op
+WorkloadResult   5: 1 op, 1477935821.00 ns, 1.4779 s/op
+WorkloadResult   6: 1 op, 1472877047.00 ns, 1.4729 s/op
+WorkloadResult   7: 1 op, 1474815738.00 ns, 1.4748 s/op
+WorkloadResult   8: 1 op, 1478526822.00 ns, 1.4785 s/op
+WorkloadResult   9: 1 op, 1506617191.00 ns, 1.5066 s/op
+WorkloadResult  10: 1 op, 1464895088.00 ns, 1.4649 s/op
+WorkloadResult  11: 1 op, 1492509860.00 ns, 1.4925 s/op
+WorkloadResult  12: 1 op, 1479861820.00 ns, 1.4799 s/op
+WorkloadResult  13: 1 op, 1492692861.00 ns, 1.4927 s/op
+WorkloadResult  14: 1 op, 1467064982.00 ns, 1.4671 s/op
+WorkloadResult  15: 1 op, 1487914985.00 ns, 1.4879 s/op
+GC:  44 17 3 262183792 1
+
+
+Mean = 1.4817 s, StdErr = 0.0032 s (0.22%); N = 15, StdDev = 0.0124 s
+Min = 1.4649 s, Q1 = 1.4729 s, Median = 1.4785 s, Q3 = 1.4925 s, Max = 1.5066 s
+IQR = 0.0196 s, LowerFence = 1.4434 s, UpperFence = 1.5220 s
+ConfidenceInterval = [1.4684 s; 1.4949 s] (CI 99.9%), Margin = 0.0133 s (0.89% of Mean)
+Skewness = 0.36, Kurtosis = 1.99, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.OS.MemoryAllocations-report.csv
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.OS.MemoryAllocations-report-github.md
+  BenchmarkDotNet.Artifacts/results/DockerBenchmark.OS.MemoryAllocations-report.html
+
+// * Detailed results *
+MemoryAllocations.HeavyMemoryAllocation: Job-UHUVAU(Toolchain=InProcessEmitToolchain) [number_of_objects_to_allocate=1000]
+Runtime = ; GC =
+Mean = 256.8439 ms, StdErr = 0.6138 ms (0.24%); N = 15, StdDev = 2.3772 ms
+Min = 254.3248 ms, Q1 = 255.0551 ms, Median = 255.9167 ms, Q3 = 258.8315 ms, Max = 262.3981 ms
+IQR = 3.7764 ms, LowerFence = 249.3905 ms, UpperFence = 264.4960 ms
+ConfidenceInterval = [254.3025 ms; 259.3853 ms] (CI 99.9%), Margin = 2.5414 ms (0.99% of Mean)
+Skewness = 0.75, Kurtosis = 2.46, MValue = 2
+-------------------- Histogram --------------------
+[253.481 ms ; 263.241 ms) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+MemoryAllocations.HeavyMemoryAllocation: Job-UHUVAU(Toolchain=InProcessEmitToolchain) [number_of_objects_to_allocate=5000]
+Runtime = ; GC =
+Mean = 1.4817 s, StdErr = 0.0032 s (0.22%); N = 15, StdDev = 0.0124 s
+Min = 1.4649 s, Q1 = 1.4729 s, Median = 1.4785 s, Q3 = 1.4925 s, Max = 1.5066 s
+IQR = 0.0196 s, LowerFence = 1.4434 s, UpperFence = 1.5220 s
+ConfidenceInterval = [1.4684 s; 1.4949 s] (CI 99.9%), Margin = 0.0133 s (0.89% of Mean)
+Skewness = 0.36, Kurtosis = 1.99, MValue = 2
+-------------------- Histogram --------------------
+[1.462 s ; 1.511 s) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=debian 9
+Intel Xeon CPU E5-2673 v4 2.30GHz, 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host] : .NET Core ? (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Toolchain=InProcessEmitToolchain
+
+|                Method | number_of_objects_to_allocate |       Mean |     Error |    StdDev |      Gen 0 |     Gen 1 |     Gen 2 | Allocated |
+|---------------------- |------------------------------ |-----------:|----------:|----------:|-----------:|-----------:|----------:|----------:|
+| HeavyMemoryAllocation |                          1000 |   256.8 ms |  2.541 ms |  2.377 ms |  9000.0000 | 3500.0000 | 1000.0000 |     50 MB |
+| HeavyMemoryAllocation |                          5000 | 1,481.7 ms | 13.260 ms | 12.403 ms | 44000.0000 |17000.0000 | 3000.0000 | 250.04 MB |
+
+// * Legends *
+  number_of_objects_to_allocate : Value of the 'number_of_objects_to_allocate' parameter
+  Mean                          : Arithmetic mean of all measurements
+  Error                         : Half of 99.9% confidence interval
+  StdDev                        : Standard deviation of all measurements
+  Gen 0                         : GC Generation 0 collects per 1000 operations
+  Gen 1                         : GC Generation 1 collects per 1000 operations
+  Gen 2                         : GC Generation 2 collects per 1000 operations
+  Allocated                     : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms                          : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:51 (51.88 sec), executed benchmarks: 2
+
+Global total time: 00:00:51 (51.88 sec), executed benchmarks: 2
+// * Artifacts cleanup *
