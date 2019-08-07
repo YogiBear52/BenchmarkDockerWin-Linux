@@ -11,7 +11,6 @@ namespace DockerBenchmark.OS
     public class Perf_Environment
     {
         private const string Key = "7efd538f-dcab-4806-839a-972bc463a90c";
-        private const string ExpandedKey = "%" + Key + "%";
 
         [GlobalSetup]
         public void Setup() => Environment.SetEnvironmentVariable(Key, "value");
@@ -21,9 +20,6 @@ namespace DockerBenchmark.OS
 
         [Benchmark]
         public string GetEnvironmentVariable() => Environment.GetEnvironmentVariable(Key);
-
-        [Benchmark]
-        public string ExpandEnvironmentVariables() => Environment.ExpandEnvironmentVariables(ExpandedKey);
 
         [Benchmark]
         public IDictionary GetEnvironmentVariables() => Environment.GetEnvironmentVariables();
