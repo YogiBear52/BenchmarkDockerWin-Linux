@@ -48,7 +48,7 @@
     *   .Net Core is considered to be one of the most performance framework nowadays, thus the OS will be the focus and not the programming language performance.
     *   .Net Core supports SIMD technology, which will be part of the benchmark as well.
 
-Yogev Mizrahi, 205707672 - College of Management
+Yogev Mizrahi
 
 References:
 
