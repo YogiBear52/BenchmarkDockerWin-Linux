@@ -25,8 +25,7 @@ namespace DockerBenchmark
 
                 var benchmarkClasses =
                     typeof(Program).Assembly.GetTypes()
-                        .Where(_ => _.IsClass && _.GetMethods().Any(m => m.GetCustomAttributes(typeof(BenchmarkAttribute), false).Length > 0))
-                        .Skip(20).Take(5).ToList();
+                        .Where(_ => _.IsClass && _.GetMethods().Any(m => m.GetCustomAttributes(typeof(BenchmarkAttribute), false).Length > 0)).ToList();
 
                 Console.WriteLine(benchmarkClasses.Count);
 
