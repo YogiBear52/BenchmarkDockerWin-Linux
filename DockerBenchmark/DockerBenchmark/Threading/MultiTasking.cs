@@ -46,20 +46,5 @@ namespace DockerBenchmark.Threading
                 });
             }
         }
-
-        //[Benchmark]
-        //public async Task HeavyLoadTasks3()
-        //{
-        //    List<Task> tasks = new List<Task>();
-        //    for (int i = 0; i < number_of_tasks; i++)
-        //    {
-        //        tasks.Add(Task.Run(() =>
-        //        {
-        //            Task.Delay(1).Wait();
-        //        }));
-        //    }
-
-        //    await Task.WhenAll(tasks);
-        //}
     }
 }
