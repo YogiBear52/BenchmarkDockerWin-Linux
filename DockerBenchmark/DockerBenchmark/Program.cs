@@ -1,4 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Exporters.Csv;
@@ -19,9 +20,11 @@ namespace DockerBenchmark
 
             try
             {
+
                 var config = DefaultConfig.Instance
-                    .With(Job.Default.With(InProcessEmitToolchain.Instance));
-                    //.With(CsvMeasurementsExporter.Default, CsvExporter.Default, RPlotExporter.Default);
+                    .With(Job.Default.With(InProcessEmitToolchain.Instance))
+                    .With(StatisticColumn.AllStatistics)
+                    .With(StatisticColumn.P95, StatisticColumn.P90, StatisticColumn.P0);
 
                 var benchmarkClasses =
                     typeof(Program).Assembly.GetTypes()
