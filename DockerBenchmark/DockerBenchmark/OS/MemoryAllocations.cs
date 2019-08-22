@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DockerBenchmark.OS
 {
@@ -12,13 +13,24 @@ namespace DockerBenchmark.OS
         public int number_of_objects_to_allocate { get; set; }
 
         [Benchmark]
-        public void HeavyMemoryAllocation()
+        public void MemoryAllocation()
         {
             List<ObjectToAllocate> objects = new List<ObjectToAllocate>();
             for (int i = 0; i < number_of_objects_to_allocate; i++)
             {
                 objects.Add(new ObjectToAllocate());
             }
+        }
+
+        [Benchmark]
+        public void ParallelMemoryAllocation()
+        {
+            List<ObjectToAllocate> objects = new List<ObjectToAllocate>();
+
+            Parallel.For(0, number_of_objects_to_allocate, _ =>
+            {
+                objects.Add(new ObjectToAllocate());
+            });
         }
     }
 
